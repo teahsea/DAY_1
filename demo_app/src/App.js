@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Home from "./Components/Home";
 
+//FUNCTION BASED
 const NAVBAR = () => {
   return (
     <div className="navbar">
@@ -26,10 +27,13 @@ const FOOTER = () => {
     </div>
   );
 };
+//------------------------------------------------------------------------------------
 
+//CLASS BASED -------------------------------------------------------------------------
 export default class App extends Component {
-  render() {
-    const employee = [
+  state = {
+    name: "demo",
+    employee: [
       {
         name: "yash",
         des: "developer"
@@ -50,12 +54,28 @@ export default class App extends Component {
         name: "devarsh",
         des: "UI/Ux"
       }
-    ];
+    ]
+  };
 
+  //REMOVE DATA
+  removeData = index => {
+    // const emp = this.state.employee;
+    const { employee } = this.state;
+
+    this.setState({
+      employee: employee.filter((data, i) => i != index)
+    });
+  };
+
+  render() {
     return (
       <div className="app">
         <NAVBAR></NAVBAR>
-        <Home data={employee}></Home>
+        <Home
+          data={this.state.employee}
+          name={this.state.name}
+          rmdata={this.removeData}
+        ></Home>
         <FOOTER></FOOTER>
       </div>
     );
