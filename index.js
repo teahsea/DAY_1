@@ -189,3 +189,71 @@
 //---------------------------------------------------------------------------------------------
 
 //CALLBACK
+
+// function one() {
+//   console.log("in one");
+// }
+// function two(callback) {
+//   setTimeout(() => {
+//     console.log("in two");
+//     callback(); //EXECUTION
+//   }, 0);
+// }
+// function three() {
+//   console.log("in three");
+// }
+
+// one();
+// two(three);
+
+//PROMISE
+
+// const promise = new Promise((resolve, reject) => {
+//   resolve("yes we did it !!");
+// });
+// console.log(promise);
+
+// function getUsers(onSucess) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (onSucess) {
+//         resolve([
+//           { id: 1, name: "abc" },
+//           { id: 1, name: "abc" },
+//           { id: 1, name: "abc" }
+//         ]);
+//       } else {
+//         reject("failed to fetch data");
+//       }
+//     }, 1000);
+//   });
+// }
+
+// getUsers(false)
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
+
+// fetch("https://api.got.show/api/show/characters")
+//   .then(response => {
+//     return response.json();
+//   })
+//   .then(data => {
+//     console.log(data);
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   });
+
+// async function getUsers() {
+//   try {
+//     const response = await fetch("https://api.got.show/api/show/characters");
+//     const data = await response.json();
+//   } catch {
+//     console.error("error");
+//   }
+//   console.log(data);
+// }
+
+// getUsers();
+
+console.log("hello");
