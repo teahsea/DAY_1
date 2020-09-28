@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import ADD from "./Components/ADD";
 import Home from "./Components/Home";
 
 //FUNCTION BASED
@@ -67,15 +68,26 @@ export default class App extends Component {
     });
   };
 
+  // ADD DATA
+  addData = data => {
+    this.setState({
+      employee: [...this.state.employee, data]
+    });
+  };
+
   render() {
     return (
       <div className="app">
         <NAVBAR></NAVBAR>
+
         <Home
           data={this.state.employee}
           name={this.state.name}
           rmdata={this.removeData}
         ></Home>
+
+        <ADD add={this.addData}></ADD>
+
         <FOOTER></FOOTER>
       </div>
     );
