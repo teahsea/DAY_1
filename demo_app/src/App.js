@@ -1,26 +1,63 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Home from "./Components/Home";
 
-function App() {
+const NAVBAR = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="navbar">
+      <ul>
+        <li>Home</li>
+        <li>Login</li>
+        <li>SignIn</li>
+        <li>About Us</li>
+      </ul>
     </div>
   );
-}
+};
 
-export default App;
+const FOOTER = () => {
+  return (
+    <div className="navbar">
+      <ul>
+        <li>contact us</li>
+        <li>email</li>
+        <li>Social</li>
+      </ul>
+    </div>
+  );
+};
+
+export default class App extends Component {
+  render() {
+    const employee = [
+      {
+        name: "yash",
+        des: "developer"
+      },
+      {
+        name: "nikunj",
+        des: "designer"
+      },
+      {
+        name: "raj",
+        des: "programmer"
+      },
+      {
+        name: "shlok",
+        des: "developer"
+      },
+      {
+        name: "devarsh",
+        des: "UI/Ux"
+      }
+    ];
+
+    return (
+      <div className="app">
+        <NAVBAR></NAVBAR>
+        <Home data={employee}></Home>
+        <FOOTER></FOOTER>
+      </div>
+    );
+  }
+}

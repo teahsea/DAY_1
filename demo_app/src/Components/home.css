@@ -1,0 +1,8 @@
+.home > ul {
+  list-style: none;
+}
+
+.home > ul > li {
+  display: inline;
+  padding: 10px;
+}

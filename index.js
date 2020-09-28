@@ -244,16 +244,16 @@
 //     console.error(error);
 //   });
 
-// async function getUsers() {
-//   try {
-//     const response = await fetch("https://api.got.show/api/show/characters");
-//     const data = await response.json();
-//   } catch {
-//     console.error("error");
-//   }
-//   console.log(data);
-// }
+async function getUsers() {
+  try {
+    const response = await fetch("https://api.got.show/api/show/characters");
+    const data = await response.json();
+    console.log(data);
+  } catch (err) {
+    console.log("error in fetching data : ", err);
+  }
+}
 
-// getUsers();
+getUsers();
 
 console.log("hello");
