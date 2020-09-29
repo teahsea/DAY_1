@@ -1,0 +1,41 @@
+.navbar {
+  background-color: #262424;
+  color: #fff;
+  overflow: auto;
+
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  float: left;
+  padding-left: 30px;
+  width: 35%;
+}
+
+.logo > img {
+  object-fit: contain;
+  height: 100px;
+  width: 100px;
+}
+
+.nav-items {
+  margin-top: 20px;
+  float: right;
+  padding-right: 30px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding-right: 10px;
+  display: inline;
+  cursor: pointer;
+  font-size: 1rem;
+}
