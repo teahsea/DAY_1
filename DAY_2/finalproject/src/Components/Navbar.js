@@ -1,6 +1,7 @@
 // rfc
 import React from "react";
 import "./navbar.css";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -15,8 +16,12 @@ export default function Navbar() {
 
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About us</li>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+          <Link to="/aboutus">
+            <li>About us</li>
+          </Link>
         </ul>
       </div>
     </div>
